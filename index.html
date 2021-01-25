@@ -3,19 +3,86 @@
     <head>
         <meta charset="utf-8">
         <title>NewForce</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
         <link rel="stylesheet" href="./styles/main.css">
     </head>
 
     <body>
-        <main id="container">
-            <article class="businesses"></article>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="index.html">Navbar</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="businessList.html">List of Businesses</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="purchasingAgents.html">Purchasing Agents</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        <main id="flex-container">
             
-            <article class="businessList--newYork"></article>
-            
-            <article class="businessList--manufacturing"></article>            
+            <!-- <input type="text" placeholder="Enter industry type" id="industrySearch" />
+            <input type="text" placeholder="Enter display type" id="displaySearch" /> -->
+            <aside>
+                <h2>Search Businesses:</h2>
+                <input type="text" placeholder="Enter business name" id="companySearch" />
+                <h3>Search Results:</h3>
+                <article class="foundCompanies"></article>
+            </aside>
+            <section class="main-content">
+                <h3>Filter Options</h3>
+                <form>
+                    <fieldset class="flexContainer form">
+                        <label for="state">State</label>
+                        <input type="text" placeholder="e.g. NY, MD, CA" name="state" id="stateSearch">
+                                        
+                        <label for="concepts">Concepts Covered</label>
+                        <input type="text" name="concepts"" id="concepts">
+                                       
+                        <label for="journalEntry">Journal Entry</label>
+                        <input type="text" name="journalEntry" id="journalEntry">
+                    
+                        <label for="industry">Industry</label>
+                        <select name="Industry" id="industry">
+                            <option value="Manufacturing">Manufacturing</option>
+                            <option value="Information">Information</option>
+                            <option value="Health care">Health care</option>
+                            <option value="Construction">Construction</option>
+                            <option value="Energy">Energy</option>
+                            <option value="Defense">Defense</option>
+                            <option value="Agriculture">Agriculture</option>
+                            <option value="Hospitality">Hospitality</option>
+                            <option value="Education">Education</option>
+                        </select>
 
+                        <input type="submit" value="Filter" name="recordEntry" id="searchEntry">
+                    </fieldset>
+                </form>
+                <article class="businesses">
+
+                </article>
+            </section>
+            
+            <!-- <article class="businessList--newYork"></article> -->
+            
+            <!-- <article class="businessList--manufacturing"></article>             -->
+            
+            <!-- <article class="agents"></article>             -->
         </main>
 
         <script type="module" src="./scripts/main.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
     </body>
 </html>

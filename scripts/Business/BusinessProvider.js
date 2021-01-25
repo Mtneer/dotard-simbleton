@@ -1,3 +1,7 @@
+import { filterDetails } from "./businessFilter.js";
+import { restructure } from "../Agents/restructureCompanyObject.js"
+
+
 const businesses = [
     {
       purchasingAgent: { nameLast: "Kirlin", nameFirst: "Kristy" },
@@ -109,29 +113,23 @@ const businesses = [
       addressFullStreet: "7157 Hudson Street Ford",
       addressCity: "Watrous"
     }
-  ];
+];
 
+// Create a new array that contains only companies that satisfy filter constraints
 export const useBusinesses = (filterInput, filterKey) => {
     let businessArray = [];
     if (filterKey === undefined) {
-        businessArray = businesses.slice()
-    } else if (filterKey === "addressStateCode") {
+        return businessArray = businesses.slice()
+    } 
 
-        businessArray = businesses.filter(companyObject => {
-            if (companyObject[filterKey] === filterInput) {
-                return true
-            }
-            return false
-        })
-    } else if (filterKey === "companyIndustry") {
+    businessArray = filterDetails(businesses.slice(), filterInput, filterKey)
 
-        businessArray = businesses.filter(companyObject => {
-            if (companyObject[filterKey] === filterInput) {
-                return true
-            }
-            return false
-        })
-    }
-    // console.log(businessArray)
     return businessArray
+}
+
+
+// Create a new array that contains only purchasing agent strings
+export const useStructure = (filterKeys)=> {
+    let newDataStructure = restructure(businesses.slice(), filterKeys)
+    return newDataStructure
 }

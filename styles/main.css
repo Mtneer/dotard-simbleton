@@ -17,3 +17,26 @@ h1,h2,h3,h4,h5,h6 {
 font-family: "Patua One", serif;
 letter-spacing: 2px;
 }
+
+#flex-container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+.flexContainer {
+    display: flex;
+    flex-direction: column;
+} 
+
+.main-content {
+    width: 50vw;
+    padding: 1em;
+    margin: 1em;
+}
+
+aside {
+    margin: 1em;
+    padding: 1em;
+}
+

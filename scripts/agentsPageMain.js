@@ -1,8 +1,6 @@
 
 import { BusinessList, informationList } from './BusinessList.js'
 
-// import { } from './htmlInputs/.input.js'
-
 
 /* filterKey options:
     {
@@ -20,9 +18,7 @@ import { BusinessList, informationList } from './BusinessList.js'
         addressCity:
       */
 
-BusinessList()
-// BusinessList("NY", "addressStateCode")
-// BusinessList("Manufacturing","companyIndustry")
 
-// // agentList([filterKeys array], "Header")
-// informationList(["purchasingAgent","companyName","phoneWork"], "Purchasing Agent")
+
+// agentList([filterKeys array], "Header")
+informationList(["purchasingAgent","companyName","phoneWork"], "Purchasing Agent")
